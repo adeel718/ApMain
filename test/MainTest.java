@@ -59,9 +59,12 @@ public class MainTest {
         		UDIDlist.put(l.getText(), l.getText());
         	}
         }
+        System.out.println("0");
         try {
+        	System.out.println("1");
             // this will load the MySQL driver, each DB has its own driver
             Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("2");
             // setup the connection with the DB.
             connect = DriverManager
                 .getConnection("jdbc:mysql://217.199.187.65/cl51-udid?"
@@ -132,7 +135,7 @@ public class MainTest {
 
          
         } catch (Exception e){
-        	
+        	System.out.println(e);
         }
         
   }
@@ -160,7 +163,7 @@ public class MainTest {
 		  System.out.println("UDID reg success");
 		  
 	  } else {
-		// Send UDID error admin mail
+		  // Send UDID error admin mail
 		  System.out.println("UDID reg error");
 	  }
   }
@@ -168,6 +171,6 @@ public class MainTest {
 
   @After
   public void tearDown() throws Exception {
-    //driver.quit();
+	  driver.quit();
     }
   }
