@@ -158,6 +158,7 @@ public class MainTest {
 	  submitBtn.click();
 	  
 	  driver.findElement(By.className("submit")).click();
+	  System.out.println(driver.getCurrentUrl());
 	  
 	  String urlCurr = driver.getCurrentUrl();
 	  String urlExp = "https://developer.apple.com/account/ios/device/deviceList.action";
