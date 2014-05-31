@@ -157,6 +157,8 @@ public class MainTest {
 	  System.out.println("INSERT dno: "+UDID);
 	  submitBtn.click();
 	  
+	  driver.findElement(By.className("submit")).click();
+	  
 	  String urlCurr = driver.getCurrentUrl();
 	  String urlExp = "https://developer.apple.com/account/ios/device/deviceList.action";
 	  if(urlCurr.equals(urlExp)) {
