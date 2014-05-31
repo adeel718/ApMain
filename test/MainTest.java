@@ -153,8 +153,8 @@ public class MainTest {
 	  
 	  UDIDdeviceName.sendKeys(ebayId+""+random);
 	  UDIDdeviceNumber.sendKeys(UDID);
-	  System.out.println("INSERT dname: "+UDIDdeviceName);
-	  System.out.println("INSERT dno: "+UDIDdeviceNumber);
+	  System.out.println("INSERT dname: "+ebayId+""+random);
+	  System.out.println("INSERT dno: "+UDID);
 	  submitBtn.click();
 	  
 	  String urlCurr = driver.getCurrentUrl();
