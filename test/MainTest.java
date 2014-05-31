@@ -157,24 +157,30 @@ public class MainTest {
 	  System.out.println("INSERT dno: "+UDID);
 	  submitBtn.click();
 	  
+	  try {
+		Thread.sleep(4000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	  driver.findElement(By.className("submit")).click();
 	  System.out.println(driver.getCurrentUrl());
 	  
 	  String urlCurr = driver.getCurrentUrl();
 	  String urlExp = "https://developer.apple.com/account/ios/device/deviceList.action";
-	  if(urlCurr.equals(urlExp)) {
+	  //if(urlCurr.equals(urlExp)) {
 		  // Send UDID success mail
-		  System.out.println("UDID reg success");
+		  System.out.println("UDID reg end");
 		  
-	  } else {
+	  //} else {
 		  // Send UDID error admin mail
-		  System.out.println("UDID reg error");
-	  }
+		  //System.out.println("UDID reg error");
+	  //}
   }
   
 
   @After
   public void tearDown() throws Exception {
-	  driver.quit();
+	  //driver.quit();
     }
   }
