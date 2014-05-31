@@ -145,15 +145,16 @@ public class MainTest {
 	  driver.get("https://developer.apple.com/account/ios/device/deviceCreate.action");
 	  
 	  // Random
-	  int random = (int)(1000.0 * Math.random());
+	  int random = (int)(100.0 * Math.random());
 	  
 	  WebElement UDIDdeviceName = driver.findElement(By.name("name"));
 	  WebElement UDIDdeviceNumber = driver.findElement(By.name("deviceNumber"));
 	  WebElement submitBtn = driver.findElement(By.className("submit"));
 	  
-	  UDIDdeviceName.sendKeys(ebayId+"_"+random);
+	  UDIDdeviceName.sendKeys(ebayId+""+random);
 	  UDIDdeviceNumber.sendKeys(UDID);
-	  
+	  System.out.println("INSERT dname: "+UDIDdeviceName);
+	  System.out.println("INSERT dno: "+UDIDdeviceNumber);
 	  submitBtn.click();
 	  
 	  String urlCurr = driver.getCurrentUrl();
